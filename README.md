@@ -1,6 +1,6 @@
 # Quarkus Reproducer for JWT privateKey.pem loading from resources issue 
 
-This example is not functional and is meant to reproduce Issue https://github.com/quarkusio/quarkus/issues/13043
+This example is not functional and is meant to reproduce Issue https://github.com/quarkusio/quarkus/issues/13049
 
 #### Version
 
