@@ -28,4 +28,15 @@ public class JWTUtil {
                 .expiresAt(System.currentTimeMillis() + 1000 * 60 * 60 * 10)
                 .sign(privateKey);
     }
+
+    public String createTokenWithSecret(Map<String, Object> claims, String subject, String secret) {
+
+        return Jwt
+                .claims(claims)
+                .subject(subject)
+                .issuer("http://localhost")
+                .issuedAt(System.currentTimeMillis())
+                .expiresAt(System.currentTimeMillis() + 1000 * 60 * 60 * 10)
+                .signWithSecret(secret);
+    }
 }
