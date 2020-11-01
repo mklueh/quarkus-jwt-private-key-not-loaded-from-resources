@@ -54,6 +54,12 @@ class JWTUtilTest {
         createToken("/resources/privateKey.pem");
     }
 
+    @Test
+    void createJWT8() {
+        UUID uuid = UUID.randomUUID();
+        assertNotNull(jwtUtil.createToken(new HashMap<>(), uuid.toString()));
+    }
+
     private void createToken(String privateKeyLocation) {
         UUID uuid = UUID.randomUUID();
         assertNotNull(jwtUtil.createToken(new HashMap<>(), uuid.toString(), privateKeyLocation));
